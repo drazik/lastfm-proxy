@@ -69,8 +69,8 @@ test.group("fetchArtist", (group) => {
         ]
       },
       bio: {
-        summary: "Daft punk summary bio",
-        content: "Daft punk full bio",
+        summary: "Daft Punk summary bio <a href=\"https://www.last.fm/music/Daft+Punk\">Read more on Last.fm</a>",
+        content: "Daft Punk full bio",
       },
       similar: {
         artist: [
@@ -132,7 +132,7 @@ test.group("fetchArtist", (group) => {
 
     assert.deepInclude(artist, {
       bio: {
-        summary: lastfmArtist.artist.bio.summary,
+        summary: "Daft Punk summary bio",
         full: lastfmArtist.artist.bio.content,
       }
     })

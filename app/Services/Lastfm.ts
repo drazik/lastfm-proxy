@@ -52,7 +52,7 @@ export const fetchArtist = async (artistName: string) => {
     name: artistInfos.artist.name,
     tags: artistInfos.artist.tags.tag,
     bio: {
-      summary: artistInfos.artist.bio.summary,
+      summary: artistInfos.artist.bio.summary.replace(/<a href=".*">.*<\/a>/, "").trim(),
       full: artistInfos.artist.bio.content,
     },
     similar: artistInfos.artist.similar.artist.map(
